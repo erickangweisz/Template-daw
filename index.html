@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>DEW - Desarrollo Web Cliente</title>
+
+    <!-- Importación de estilos de la master -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Importación de estilos de recursos adicionales -->
+    <script type="text/javascript" src="typeof.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ______________________________HEADER_____________________________ -->
+
+        <div class="page-header">
+            <h1><i class="fa fa-grav" aria-hidden="true"></i> [DEW] <small>Eventos en elementos de formulario</small></h1>
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i> Jonatan Arrocha Kang <br>
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i> Pedro Ramos Gonzalez
+        </div>
+        <hr>
+
+        <!-- ____________________________EJERCICIO____________________________ -->
+
+        <!-- EJERCICIO 6 -->
+        <div class="row">
+            <div class="col-md-6">
+                <span class="enunciado_1">6. Valores dos campos iguales</span><br><br>
+                <form method="POST" action="home.html">
+                    <label for="pass">Contraseña:</label> <input type="password" id="pass" name="campo1" class="form-control"><br>
+                    <label for="pass_rep">Repetir contraseña:</label> <input type="password" id="pass_rep" name="campo2" class="form-control"><br>
+                    <button type="button" onclick="validarCampos(this.form)" class="btn btn-success btn-sm">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i> Iniciar sesión 
+                    </button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <!-- EJERCICIO 7 -->
+        <div class="row">
+            <div class="col-md-6">
+                <form method="GET" action="home.html">
+                    <span class="enunciado_1">7. Seleccionar checkbox con mismo nombre</span><br><br>
+                    <span>Por favor, seleccione 3 opciones como máximo:</span><br><br>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <input type="checkbox" name="casilla1" value="Opcion 1" onclick="limitarSeleccion(this.form)" id="inp_1"> <label for="inp_1">Opción 1</label><br>
+                            <input type="checkbox" name="casilla1" value="Opcion 2" onclick="limitarSeleccion(this.form)" id="inp_2"> <label for="inp_2">Opción 2</label><br>
+                            <input type="checkbox" name="casilla1" value="Opcion 3" onclick="limitarSeleccion(this.form)" id="inp_3"> <label for="inp_3">Opción 3</label><br>
+                            <input type="checkbox" name="casilla1" value="Opcion 4" onclick="limitarSeleccion(this.form)" id="inp_4"> <label for="inp_4">Opción 4</label><br>
+                            <input type="checkbox" name="casilla1" value="Opcion 5" onclick="limitarSeleccion(this.form)" id="inp_5"> <label for="inp_5">Opción 5</label><br><br>
+                            <button type="submit" class="btn btn-success btn-sm">
+                                <i class=" fa fa-paper-plane " aria-hidden="true "></i> Enviar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <!-- EJERCICIO 8 -->
+        <div class="row">
+            <div class="col-md-6">
+                <span class="enunciado_1">8. Selecciona número determinado checkbox</span><br><br>
+                <form method="GET" action="home.html">
+                    <input type="checkbox" onclick="todos(this)" id="txt_checkbox" />
+                    <label for="txt_checkbox" id="lbl_check">Seleccionar todos</label><br><br>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <input type="checkbox" name="casilla2" value="Opcion 1" id="ipt_1"> <label for="ipt_1">Opcion 1</label><br>
+                            <input type="checkbox" name="casilla2" value="Opcion 2" id="ipt_2"> <label for="ipt_2">Opcion 2</label><br>
+                            <input type="checkbox" name="casilla2" value="Opcion 3" id="ipt_3"> <label for="ipt_3">Opcion 3</label><br>
+                            <input type="checkbox" name="casilla2" value="Opcion 4" id="ipt_4"> <label for="ipt_4">Opcion 4</label><br>
+                            <input type="checkbox" name="casilla2" value="Opcion 5" id="ipt_5"> <label for="ipt_5">Opcion 5</label><br>
+                            <br>
+                            <button type="submit" class="btn btn-success btn-sm">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar
+                            </button><br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- __________________________FIN EJERCICIO__________________________ -->
+
+    </div>
+
+    <!-- Librerías de la master -->
+    <script src="lib/jquery.min.js "></script>
+    <script src="bootstrap/js/bootstrap.min.js "></script>
+
+    <!-- Archivo personalizado de Javascript -->
+    <script src="lib/logica.js "></script>
+
+</body>
+
+</html>
